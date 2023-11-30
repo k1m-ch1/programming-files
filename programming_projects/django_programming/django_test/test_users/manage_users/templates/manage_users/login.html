@@ -1,0 +1,12 @@
+{% extends 'manage_users/layout.html' %}
+
+{% block body %}
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  <label style="display: block;">Enter your username:</label>
+  <input type="text" name="username">
+  <label style="display: block;">Enter your password: </label>
+  <input type="password" name="password">
+  <input type="submit">
+</form>
+{% endblock %}

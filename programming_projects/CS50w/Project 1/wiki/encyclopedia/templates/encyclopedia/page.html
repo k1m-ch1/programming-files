@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title%}
+{{ page_name }}
+{% endblock %}
+{% block body%}
+    {% if page == None %}
+      <h2>PAGE NOT FOUND!</h2>
+    {% else %}
+      {{ page | safe}}
+    {% endif %}
+    <footer>
+      <form action="{% url "encyclopedia:new" %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="title" value="{{ page_name }}">
+        <input type="hidden" name="content" value="{{ page }}">
+        <input type="hidden" name="edit" value="true">
+        <input type="submit">
+      </form>
+    </footer>
+{% endblock %}

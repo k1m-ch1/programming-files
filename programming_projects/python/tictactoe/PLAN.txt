@@ -1,0 +1,36 @@
+1. Tic-Tac-Toe has column A, B, C and row 1, 2, 3
+
+A1 | B1 | C1
+---+----+---
+A2 | B2 | C2
+---+----+---
+A3 | B3 | C3
+
+2. Use a list to represent contain the total column and to index all of the cells
+["A1", "A2", "A3",...,"C3"]
+
+3. Use a list of tuple to represent the cells that are selected and in the tuple will contain the cells selected and the player selecting the cell.
+Ex: [("A1", "X"), None, ("B2", "O",...]
+
+3.5. Use a list to represent cells selected
+Ex: ["x", None, "O"...]
+
+4. Use two list to represent the cells each player has selected
+Ex: 
+player_x = ["A1", "B1", "C2"...]
+player_y = ["A2", "B2", "C1"...]
+
+5. To check :
+-you sort "player_x" and "player_o" by lambda x: x[0], divide it into a sub list 
+and check whether there's three consecutive alphabet
+Ex: ["A1", "A2", "A3", "B2"] is True
+["A1,"A2","B1"] is False
+
+-sort by lambda x: x[1], divide it into a sublist and check for consecutive number
+Ex: ["A1", "B1", "C1", "A2"] is True
+["A1", "B1", "B2"] is False
+
+-check for corner cases when diagonal win
+["A1", "B2", "C3"] is True
+["A3", "B2", "C1"] is True
+

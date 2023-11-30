@@ -1,0 +1,47 @@
+body {
+  color: white;
+  background-color: #0F0F0F;
+  font-family: Arial;
+}
+
+div {
+  display:inline-block;
+}
+
+.outer-shell {
+  display: block;
+}
+
+img {
+  width: 168px;
+  height: 94px;
+}
+
+.video-title {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.channel-and-details {
+  display: block;
+  font-size: 15px;
+  color: grey;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+p {
+  margin: 0px;
+}
+
+.text-details{
+  vertical-align: top;
+  margin-left: 3px;
+  
+}
+
+.outer-shell {
+  margin: 4px;
+  
+}

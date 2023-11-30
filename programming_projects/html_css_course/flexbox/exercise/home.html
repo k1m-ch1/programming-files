@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home bar</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .home {
+        font-size: 20px;
+      }
+
+      .not-home {
+        background-color: blue;
+        color: white;
+        padding: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-width: 0px;
+        border-radius: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="bar">
+        <div class="home">Home</div>
+        <div class="not-home">14</div>
+      </div>
+      <div class="bar">
+        <div class="home">Notification</div>
+        <div class="not-home">5</div>
+      </div>
+      <div class="bar">
+        <div class="home">Message</div>
+        <div class="not-home">3</div>
+      </div>
+    </div>
+  </body>
+</html>

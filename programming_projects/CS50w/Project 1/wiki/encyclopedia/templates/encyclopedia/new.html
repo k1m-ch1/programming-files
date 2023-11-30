@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+  <form action="{% url "encyclopedia:index" %}" method="post">
+    {% csrf_token %}
+    <label for="title-bar" required>Title: </label> <input id="title-bar" name="title" value={{ title }}>
+    <br>
+    <label for="content-area">Content: </label>
+    <br>
+    <textarea id="content-area" name="content" value="{{ content }}">
+    </textarea>
+    <br>
+    <input type="hidden" name="edit" value="{{ edit }}">
+    <input type="submit" class="btn">
+  </form>
+{% endblock%}

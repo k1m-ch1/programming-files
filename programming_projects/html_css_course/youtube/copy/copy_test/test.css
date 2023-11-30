@@ -1,0 +1,91 @@
+body {
+  background-color: #0F0F0F;
+}
+
+.head-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input {
+ margin: 0px;
+ width: 100%;
+ background-color: #0F0F0F;
+ border-width: 2px;
+ border-color: #222222;
+ border-style: solid;
+ padding: 5px;
+ font-family: Arial;
+ font-size: 20px;
+ color: white;
+ align-self: center;
+ justify-self: center;
+}
+
+input:focus {
+  outline: 0px;
+  border-color: #007ACC;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.youtube-search-bar-div {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  flex: 1;
+}
+
+.button-near-search-bar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 200px;
+}
+
+button {
+  margin: 0px;
+}
+
+.placeholder-div {
+  flex: 1;
+}
+
+.buttons-buttons {
+  display:inline-block;
+}
+
+.body-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
+  row-gap: 50px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.pfp {
+  width: 20%;
+  border-radius: 100%;
+}
+
+p {
+  width: 75%;
+  color: white;
+  display: inline-block;
+  margin: 0px;
+  font-family: Arial;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+

@@ -1,0 +1,62 @@
+[
+  {
+    "Icon": {
+      "text": "",
+      "img_src": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Sword.png/revision/latest/scale-to-width-down/64?cb=20210413210800"
+    },
+    "Type": {
+      "text": "Swords"
+    },
+    "Info": {
+      "text": "Sword attacks are the middle ground of melee weapons. The damage and speed of their attacks are comparable to those of Polearms, though with a shorter reach."
+    }
+  },
+  {
+    "Icon": {
+      "text": "",
+      "img_src": "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Icon_Claymore.png/revision/latest/scale-to-width-down/64?cb=20210413210803"
+    },
+    "Type": {
+      "text": "Claymores"
+    },
+    "Info": {
+      "text": "Claymores attacks hit slower than melee weapons like Swords and Polearms, but deal much more damage per swing. Due to being considered Blunt Attacks, Claymore attacks deal increased damage to Geo objects, such as monsters' shields."
+    }
+  },
+  {
+    "Icon": {
+      "text": "",
+      "img_src": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Icon_Polearm.png/revision/latest/scale-to-width-down/64?cb=20210413210804"
+    },
+    "Type": {
+      "text": "Polearms"
+    },
+    "Info": {
+      "text": "Polearms have fast attacks, long forward reach, and deal moderate damage per hit."
+    }
+  },
+  {
+    "Icon": {
+      "text": "",
+      "img_src": "https://static.wikia.nocookie.net/gensin-impact/images/2/27/Icon_Catalyst.png/revision/latest/scale-to-width-down/64?cb=20210413210802"
+    },
+    "Type": {
+      "text": "Catalysts"
+    },
+    "Info": {
+      "text": "Due to their magical nature, all Normal and Charged Attacks performed with a Catalyst are considered elemental damage. The element of the damage depends on the wielder's natural element/vision."
+    }
+  },
+  {
+    "Icon": {
+      "text": "",
+      "img_src": "https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Bow.png/revision/latest/scale-to-width-down/64?cb=20210413210801"
+    },
+    "Type": {
+      "text": "Bows"
+    },
+    "Info": {
+      "text": "Bows boast long-ranged attacks, with Charged Attacks that are capable of hitting monsters as far as the eye can see with the proper aim. A fully-Charged Attack deals elemental damage."
+    }
+  }
+]
