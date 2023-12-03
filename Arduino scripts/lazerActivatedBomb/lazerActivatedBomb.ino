@@ -11,18 +11,19 @@
 #define D1 9
 #define DP 6
 #define BUZZER_PIN 3
+#define LIGHT_RESISTOR_PIN 2
 
 #define NUM_OF_DIGITS 4
 #define NUM_OF_SEGMENTS 7
-#define BEEP_TIME 75
+#define BEEP_TIME 50
 #define BEEP_LOUDNESS 255
 
-#define COUNTDOWN_TIME 100
-int timeLeft;
+#define COUNTDOWN_TIME 15
+
 
 const int SEGMENT_PIN_SETUP[NUM_OF_SEGMENTS] = {A, B, C, D, E, F, G};
 const int DIGIT_PIN_SETUP[NUM_OF_DIGITS] = {D1, D2, D3, D4};
-const unsigned long startMillis = millis();
+
 
 String DIGIT_DISPLAY[10] = {
   "1111110", 
@@ -45,7 +46,12 @@ int convertCharToInt(char digitAsChar){
 }
 
 String convertIntToString(int numberAsInt){
-  return (String(numberAsInt/1000 % 10) + String(numberAsInt/100 % 10) + String(numberAsInt/10 % 10) + String(numberAsInt % 10)); 
+  if (numberAsInt > 0){
+    return (String(numberAsInt/1000 % 10) + String(numberAsInt/100 % 10) + String(numberAsInt/10 % 10) + String(numberAsInt % 10)); 
+  }
+  else {
+    return "0000";
+  }
 }
 
 void displayToTimer(String timeToDisplay){
@@ -65,14 +71,20 @@ void displayToTimer(String timeToDisplay){
     for (int i = 0; i < NUM_OF_SEGMENTS; i++){
       digitalWrite(SEGMENT_PIN_SETUP[i], convertCharToInt(pinoutLightUp[i]));
     }
-    delay(5);
+    delay(2);
   }
 }
 
-void beep(unsigned long timePassed, int loudness){
-  int hundreds = (timePassed%1000);
+void turnOffDisplay(){
+  for(int i = 0; i < NUM_OF_DIGITS; i++){
+    digitalWrite(DIGIT_PIN_SETUP[i], HIGH);
+  }
+}
+
+void beep(unsigned long timePassed, int loudness, int timesPerCycle){
+  int hundreds = (timePassed%1000%(1000/timesPerCycle));
   Serial.println(hundreds);
-  if (hundreds < BEEP_TIME){
+  if (hundreds < (BEEP_TIME)){
     analogWrite(BUZZER_PIN, loudness);
   }
   else{
@@ -80,9 +92,45 @@ void beep(unsigned long timePassed, int loudness){
   }
 }
 
+void activateCountDown(){
+    const unsigned long startMillis = millis();
+    unsigned long timePassed = millis() - startMillis;
+    int timeLeft = COUNTDOWN_TIME - (timePassed/1000);
+    while(timeLeft > -3){
+     if (timeLeft > 10){
+      beep(timePassed, BEEP_LOUDNESS, 1);
+     }
+     else if (timeLeft > 5){
+      beep(timePassed, BEEP_LOUDNESS, 3);
+     }
+     else if (timeLeft > 3){
+      beep(timePassed, BEEP_LOUDNESS, 5);
+     }
+     else if (timeLeft > 2){
+      beep(timePassed, BEEP_LOUDNESS, 7);
+     }
+     else if (timeLeft > 1){
+      beep(timePassed, BEEP_LOUDNESS, 9);
+     }
+     else if (timeLeft > 0){
+      beep(timePassed, BEEP_LOUDNESS, 12);
+     }
+     else {
+      beep(timePassed, BEEP_LOUDNESS, 1000/BEEP_TIME);
+     }
+      displayToTimer(convertIntToString(timeLeft));
+      timePassed = millis() - startMillis;
+      timeLeft = COUNTDOWN_TIME - (timePassed/1000);
+    }
+    beep(BEEP_TIME+1, BEEP_LOUDNESS, 1);
+    turnOffDisplay();
+}
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(LIGHT_RESISTOR_PIN, INPUT);
+  
   for (int i = 0; i < NUM_OF_SEGMENTS; i++){
     pinMode(SEGMENT_PIN_SETUP[i], OUTPUT);
   }
@@ -91,15 +139,16 @@ void setup() {
     pinMode(DIGIT_PIN_SETUP[i], OUTPUT);
   }
   Serial.begin(9600);
-  timeLeft = COUNTDOWN_TIME;
+  
+ 
+  
 
 }
 
 void loop() {
 //   put your main code here, to run repeatedly:
+  if (digitalRead(LIGHT_RESISTOR_PIN) == 0){
+    activateCountDown();
+  }
 
-  unsigned long timePassed = millis() - startMillis;
-  int timeLeft = COUNTDOWN_TIME - (timePassed/1000);
-  beep(timePassed, BEEP_LOUDNESS);
-  displayToTimer(convertIntToString(timeLeft));
 }
