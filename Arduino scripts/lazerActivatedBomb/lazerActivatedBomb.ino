@@ -138,10 +138,6 @@ void setup() {
     pinMode(DIGIT_PIN_SETUP[i], OUTPUT);
   }
   Serial.begin(9600);
-  
- 
-  
-
 }
 
 void loop() {
@@ -149,5 +145,4 @@ void loop() {
   if (digitalRead(LIGHT_RESISTOR_PIN) == 0){
     activateCountDown();
   }
-
 }
