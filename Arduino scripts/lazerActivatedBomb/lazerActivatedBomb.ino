@@ -83,7 +83,6 @@ void turnOffDisplay(){
 
 void beep(unsigned long timePassed, int loudness, int timesPerCycle){
   int hundreds = (timePassed%1000%(1000/timesPerCycle));
-  Serial.println(hundreds);
   if (hundreds < (BEEP_TIME)){
     analogWrite(BUZZER_PIN, loudness);
   }
