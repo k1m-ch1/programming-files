@@ -18,7 +18,7 @@
 #define BEEP_TIME 50
 #define BEEP_LOUDNESS 255
 
-#define COUNTDOWN_TIME 15
+#define COUNTDOWN_TIME 20
 
 
 const int SEGMENT_PIN_SETUP[NUM_OF_SEGMENTS] = {A, B, C, D, E, F, G};
@@ -38,12 +38,14 @@ String DIGIT_DISPLAY[10] = {
   "1111011"
 };
 
+
 String timeToDisplay = "1234";
 
 int convertCharToInt(char digitAsChar){
   int digitAsInt = (int)digitAsChar - 48;
   return digitAsInt;
 }
+'0'
 
 String convertIntToString(int numberAsInt){
   if (numberAsInt > 0){
@@ -53,7 +55,7 @@ String convertIntToString(int numberAsInt){
     return "0000";
   }
 }
-
+"1234"
 void displayToTimer(String timeToDisplay){
   for (int i = 0; i < NUM_OF_DIGITS; i++){
  
@@ -95,7 +97,7 @@ void activateCountDown(){
     const unsigned long startMillis = millis();
     unsigned long timePassed = millis() - startMillis;
     int timeLeft = COUNTDOWN_TIME - (timePassed/1000);
-    while(timeLeft > -3){
+    while(timeLeft > -2){
      if (timeLeft > 10){
       beep(timePassed, BEEP_LOUDNESS, 1);
      }

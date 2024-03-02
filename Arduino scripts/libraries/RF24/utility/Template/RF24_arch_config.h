@@ -52,13 +52,14 @@
 #endif
 
 typedef uint16_t prog_uint16_t;
+typedef uint16_t rf24_gpio_pin_t;
 #define PSTR(x)  (x)
 #define printf_P printf
 #define strlen_P strlen
 #define PROGMEM
-#define pgm_read_word(p) (*(p))
+#define pgm_read_word(p) (*(const unsigned short*)(p))
 #define PRIPSTR          "%s"
-#define pgm_read_byte(p) (*(p))
+#define pgm_read_byte(p) (*(const unsigned char*)(p))
 
 // Function, constant map as a result of migrating from Arduino
 #define LOW                      GPIO::OUTPUT_LOW

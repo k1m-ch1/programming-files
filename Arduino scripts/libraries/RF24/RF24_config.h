@@ -44,6 +44,9 @@
     #define RF24_SPI_SPEED 10000000
 #endif
 
+/// A sentinel used to control fetching the pipe info in `RF24::available()`.
+#define RF24_NO_FETCH_PIPE 0XFF
+
 //ATXMega
 #if defined(__AVR_ATxmega64D3__) || defined(__AVR_ATxmega128D3__) || defined(__AVR_ATxmega192D3__) || defined(__AVR_ATxmega256D3__) || defined(__AVR_ATxmega384D3__)
     // In order to be available both in Windows and Linux this should take presence here.
@@ -79,6 +82,19 @@
 
 #else //Everything else
     #include <Arduino.h>
+
+    #ifdef NUM_DIGITAL_PINS
+        #if NUM_DIGITAL_PINS < 255
+typedef uint8_t rf24_gpio_pin_t;
+            #define RF24_PIN_INVALID 0xFF
+        #else
+typedef uint16_t rf24_gpio_pin_t;
+            #define RF24_PIN_INVALID 0xFFFF
+        #endif
+    #else
+typedef uint16_t rf24_gpio_pin_t;
+        #define RF24_PIN_INVALID 0xFFFF
+    #endif
 
     #if defined(ARDUINO) && !defined(__arm__) && !defined(__ARDUINO_X86__)
         #if defined SPI_UART
@@ -159,12 +175,18 @@ extern HardwareSPI SPI;
     #endif // defined (__ARDUINO_X86__)
 
     // Progmem is Arduino-specific
-    #if defined(ARDUINO_ARCH_ESP8266) || defined(ESP32)
+    #if defined(ARDUINO_ARCH_ESP8266) || defined(ESP32) || (defined(ARDUINO_ARCH_RP2040) && !defined(ARDUINO_ARCH_MBED))
         #include <pgmspace.h>
         #define PRIPSTR "%s"
         #ifndef pgm_read_ptr
-            #define pgm_read_ptr(p) (*(p))
+            #define pgm_read_ptr(p) (*(void* const*)(p))
         #endif
+        // Serial.printf() is no longer defined in the unifying Arduino/ArduinoCore-API repo
+        // Serial.printf() is defined if using the arduino-pico/esp32/8266 repo
+        #if defined(ARDUINO_ARCH_ESP32) // do not `undef` when using the espressif SDK only
+            #undef printf_P             // needed for ESP32 core
+        #endif
+        #define printf_P Serial.printf
     #elif defined(ARDUINO) && !defined(ESP_PLATFORM) && !defined(__arm__) && !defined(__ARDUINO_X86__) || defined(XMEGA)
         #include <avr/pgmspace.h>
         #define PRIPSTR "%S"
@@ -205,10 +227,10 @@ typedef uint16_t prog_uint16_t;
             #define PROGMEM
         #endif
         #ifndef pgm_read_word
-            #define pgm_read_word(p) (*(p))
+            #define pgm_read_word(p) (*(const unsigned short*)(p))
         #endif
         #if !defined pgm_read_ptr || defined ARDUINO_ARCH_MBED
-            #define pgm_read_ptr(p) (*(p))
+            #define pgm_read_ptr(p) (*(void* const*)(p))
         #endif
         #ifndef PRIPSTR
             #define PRIPSTR "%s"
