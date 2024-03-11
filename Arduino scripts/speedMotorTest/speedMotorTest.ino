@@ -3,6 +3,7 @@ unsigned int count = 0;
 
 void increaseCount(){
   count++;
+  // Serial.println("increased");
 }
 void setup() {
   // put your setup code here, to run once:
@@ -15,8 +16,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (millis() - prevTime > 1000){
-    Serial.print("Count in 1 second ");
-    Serial.println(count);
+  //  Serial.print("Count in 1 second ");
+   Serial.println(count*3);
     prevTime = millis();
     count = 0;
   }
