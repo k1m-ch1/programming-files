@@ -1,5 +1,6 @@
-unsigned long long prevTime;
+unsigned int prevTime;
 unsigned int count = 0;
+unsigned int sampleRate = 10; //sample rate in sample per seconds
 
 void increaseCount(){
   count++;
@@ -15,9 +16,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (millis() - prevTime > 1000){
+  if (millis() - prevTime > 1000/sampleRate){
   //  Serial.print("Count in 1 second ");
-   Serial.println(count*3);
+   Serial.println(count*(millis() - prevTime));
     prevTime = millis();
     count = 0;
   }
