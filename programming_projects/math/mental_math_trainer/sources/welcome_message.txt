@@ -1,0 +1,5 @@
+This is a mental math trainer program.
+Mode select: addition, subtraction, multiplication
+Input in the form of: YYY
+for example: YYN will contain addition, subraction and no multiplication
+Select your mode: 
