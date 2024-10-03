@@ -20,14 +20,14 @@ def main():
     run_date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     selected_mode = select_mode()
     data = []
-    int_pattern = r"^[0-9]+$"
+    int_pattern = r"^[0-9]+$|^-[0-9]+$"
     exit_pattern = r"^exit$"
     while not re.match(int_pattern, number_of_questions:=input("How many questions this session: ")):
         print("Invalid input, please input an integer.")
     number_of_questions = int(number_of_questions)
     for i in range(1, number_of_questions+1):
         a = random.randint(1, 19)
-        b = random.randint(0, 9) % a
+        b = random.randint(1, 9)
         selected_opp = random.choice(selected_mode)
         answer = selected_opp[0](a, b)
         start_time = time.time()
