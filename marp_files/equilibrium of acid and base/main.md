@@ -2,6 +2,7 @@
 marp: true
 theme: graph_paper
 title: equilibrium of acid and base
+paginate: true
 ---
 
 <style>
@@ -88,7 +89,7 @@ img[alt~="center"] {
 គេរលាយអាសុីតនិងបាសក្នុងទឹក។
 តាមការបកស្រាយខាងលើនិងតាមវិចារណញ្ញាណអ្នក ចូរបំពេញតារាងនេះ
 
-| ប្រភេទគីមី  | ប្រតិកម្ម(សព្វឬមិនសព្វ)  | អង្គធាតុប្រតិករសល់?| អង្គធាតុប្រតិករ = អង្គធាតុកកើត?|
+| ប្រភេទគីមី  | ប្រតិកម្ម(សព្វឬមិនសព្វ)  | សល់អង្គធាតុប្រតិករ?| អង្គធាតុប្រតិករ = អង្គធាតុកកើត?|
 |---|---|---|---|
 |អាសុីតខ្លាំង|||
 |អាសុីតខ្សោយ|||
@@ -157,7 +158,7 @@ img[alt~="center"] {
 
 # រកភាគរយអុីយ៉ុងកម្ម $\alpha$
 
-ភាគរយអុីយ៉ុងកម្ម $\alpha$ ជាទិន្ន័យមួយស្រួលមើលនិងស្រួលយល់ដល់គីមីវិទូ។ $\alpha$ បង្ហាញពីភាគរយនៃអាសុីតឬបាសដើមដែលបានបំបែកជាអុីយ៉ុង។ 
+ភាគរយអុីយ៉ុងកម្ម $\alpha$ ជាទិន្នន័យមួយស្រួលមើលនិងស្រួលយល់ដល់គីមីវិទូ។ $\alpha$ បង្ហាញពីភាគរយនៃអាសុីតឬបាសដើមដែលបានបំបែកជាអុីយ៉ុង។ 
 បើគេមានសមីការលំនឹង៖ 
 $$
 \ce{HA(aq) + H2O(l) <=> A-(aq) + H3O+(aq)}
@@ -251,7 +252,7 @@ $$
 # សូលុយស្យុងតំប៉ុងនិងpH
 ថេរអុីយ៉ុងកម្មកំណត់ដោយ $K_a = \frac{\ce{[A-] \times [H3O+]}}{\ce{[HA]}}$។
 $pK_a$កំណត់ដោយ $pK_a = -\log{K_a}$
-នៅក្នុងសូលុយស្យុងតំប៉ុង $\ce{HA} = \ce{A-}$
+នៅក្នុងសូលុយស្យុងតំប៉ុង $\ce{[HA]} = \ce{[A-]}$
 គេបាន $pK_a = - \log{\left(\frac{\ce{[A-] \times [H3O+]}}{\ce{[HA]}}\right)} = -\log{\left(\frac{\ce{[A-] \times [H3O+]}}{\ce{[A-]}}\right)} = -\log{\ce{[H3O+]}} = pH$
 ដូចនេះ $pK_a = pH$
 
@@ -273,13 +274,17 @@ VI. គេមានសូលុយស្យុង 500mL ដែលក្នុង
 នាំឲ្យ $[HF] = \frac{0.06}{0.5} = \boxed{0.12M};\ [NaF] = \frac{0.06}{0.5} = \boxed{0.12M}$\
 ដូចនេះកំហាប់ដើម $\ce{[HF]} = 0.12M;\ \ce{[NaF]} = 0.12M$
 
+# Note
+* $V_s$ វាថេរ
+* គេបំបែកពី $\text{mol}$ ទៅ កំហាប់ជាម៉ូល $\text{mol}/l$ ដើម្បីងាយស្រួល​និយាយគ្នា មិនចាំបាច់បំបែកច្រើនតង់
+
 ---
 2. រក $\ce{[H3O+]}$ និង $pH$
 សមីការអុីយ៉ុងបំបែក $\underset{0.12M}{\ce{NaF(s)}} \rightarrow \underset{0.12M}{\ce{Na+(aq)}} + \underset{0.12M}{\ce{F-(aq)}}$
 សមីការអុីយ៉ុងកម្ម 
 $
 \begin{align}
-\quad\quad\quad\quad & \ce{HF(aq)} + &\ce{H2O(l)} \rightarrow &\ce{F-(aq)} + &\ce{H3O+(aq)}& \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \\
+\quad\quad\quad\quad & \ce{HF(aq)} + &\ce{H2O(l) <=>} &\ce{F-(aq)} + &\ce{H3O+(aq)}& \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \\
 I: & 0.12 & & 0.12 & 0 &\\
 C: & -x & & +x & +x &\\
 E: &0.12 -x& & 0.12 + x& x&
@@ -303,46 +308,182 @@ $
 
 ---
 
+# លំហាត់បន្ថែម
 
-# ការពិសោធន៍បន្ថែម
-ដើម្បីសិក្សាលក្ខណៈនៃសូលុយស្យុងតំប៉ុង គេធ្វើការពិសោធន៍បន្ថែម។ គេបន្ថែម $\ce{H3O+}$ រួចសិក្សា pH របស់វាកត់ចូលក្នុងតារាងមួយ។ គេចង់បំពេញតារាងនេះ
-
-|$\ce{[H3O+]}$ ថែម|$\ce{[H3O+]_f}$|pH|
-|---|---|---|
-|0.04
-|0.08
-|0.12
-|0.16
-
-សមីការបន្សាប $\ce{F-(aq) + H3O+(aq) -> HF(aq) + H2O(l)}$
+គេមានឧស្ម័ន $\ce{HCl}$ ចំនួន $11.2l$ ក្នុងសីតុណ្ហភាព $T = 0^\circ C$។ 
+1. រក $V_m$ ដោយប្រើប្រាស់ច្បាប់ឧស្ម័នបរិសុទ្ធ។​ $(R = 8.314 J/mol \cdot K)$
+2. រក​ $n_\ce{HCl}$
+3. គេលាយឧស្ម័នចូលទៅក្នុងទឹក $2000ml$។ ចូរគណនាកំហាប់អុីដ្រូញ៉ូមក្នុងសូលុយស្យុង។ $(K_a(\ce{HCl/Cl-}) = 1.3 \times 10^6)$ (Yes the positive exponent is not a mistake)
+5. ទាញរក pH។
+4. ចូររក​ $\alpha$។ តើហេតុអ្វីបានគេថា $\ce{HCl}$ ជាអាសុីតខ្លាំង? តាមទិន្នន័យខាងលើ ចូរបកស្រាយឃ្លា "ដោយ $\ce{HCl}$ ជាម៉ូណូអាសុីតខ្លាំង $\ce{[HCl] = [H3O+]}$"
 
 ---
 
+# លំហាត់ Style ចុងក្រោយ
+
+គេយកដុំប៉ូតាស្យូមអុីដ្រុកសុីត $\ce{KOH} = 0.02\text{mol}$ ដាក់ក្នុងល្បាយសូលុយស្យុងមួយដែលមានអាសុីតអាសេទិច $\ce{CH3COOH} = 0.16\text{mol}$ និងប៉ូតាស្យូមអាសេតាត​ $\ce{CH3COOK} = 0.21\text{mol}$ រលាយចូល។ សូលុយស្យុងនេះមានមាឌ 1l។ គណនា pH នៃសូលុយស្យុង។ គេឲ្យ $K_a = 1.8 \times 10^{-5}, \log 1.1 = 0.04$
+
+---
+
+# ចម្លើយ
+
+រក pH
+\+ រក $\ce{[KOH], [CH3COOH], [CH3COOK]}$
+តាម $C = \frac{n}{V_s}$
+
+ដោយ $
+\begin{cases}
+n_\ce{KOH} = 0.02\text{mol}\\
+n_\ce{CH3COOH} = 0.16\text{mol}\\
+n_\ce{CH3COOK} = 0.21\text{mol}\\
+V_s = 1l
+\end{cases}$
+
+នាំឲ្យ $
+\begin{cases}
+\ce{[KOH]} = \frac{0.02}{1} = 0.02M\\
+\ce{[CH3COOH]} = \frac{0.16}{1} = 0.16M\\
+\ce{[CH3COOK]} = \frac{0.21}{1} = 0.21M
+\end{cases}
+$
+
+# Note
+* គេបំបែកទៅជាកំហាប់ដោយសារ $V_s$ មិនប្រែប្រួល $\implies$ ងាយស្រួលនិយាយគ្នា
+
+---
+
+សមិការ 
 $
 \begin{align}
-\quad\quad\quad\quad & \ce{HF(aq)} + &\ce{H2O(l)} \rightarrow &\ce{F-(aq)} + &\ce{H3O+(aq)}& \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \\
-I: & 0.12 & & 0.12 & \ce{[H3O+]_i} &\\
-C: & -x & & +x &  x &\\
-E: &0.12 -x& & 0.12 + x& \ce{[H3O+]_i}  + x&
+\quad\quad\quad\quad & \ce{CH3COOH(aq)} + &\ce{KOH(l)} &\rightarrow &\ce{CH3COOK(aq)} & + \ce{H2O(l)}&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\\
+I: & 0.16 & 0.02 & &  0.21 &  &\\
+C: & -0.02 & - 0.02 & &  +0.02 &  &\\
+R: & 0.14 & 0 & &  0.23 & &
 \end{align}
 $
 
-តាមកន្សោមថេរលំនឹង $K_a = \ce{\frac{[F-] \times [H3O+]}{[HF]}} = \frac{(0.12 + x)(\ce{[H3O+]_i} + x)}{0.12 - x} = 6.7 \times 10^{-4}M$
+សមីការអុីយ៉ុងបំបែក $\underset{0.23M}{\ce{CH3COOK(aq)}} \rightarrow \underset{0.23M}{\ce{K+(aq)}} + \underset{0.23M}{\ce{CH3COO-(aq)}}$
 
-សមមូល $\ce{0.12[H3O+]_i + x[H3O+]_i + 0.12 x + x^2 = K_a(0.12 - x)}$
-សមមូល $\ce{x^2 + ([H3O+]_i + 0.12 + K_a)x + 0.12[H3O+]_i - 0.12K_a} = 0$
-សមមូល $x = \ce{\frac{-([H3O+]_i + 0.12 + K_a) + \sqrt{\ce{([H3O+]_i + 0.12 + K_a)^2 + 4 \times 0.12([H3O+]_i - K_a)}}}{2}}$
+# Note
+* ជាបឋម សរសេរសមីការសព្វដែលរួមមានសមីការ បន្សាបអាសុីតខ្សោយ បាសខ្លាំង និងសមីការអុីយ៉ុងបំបែក
+* កុំភ្លេចដាក់ទិន្នន័យគ្រប់គ្រាន់ចូលក្នុងតារាង
+
+---
+សមីការអុីយ៉ុងកម្ម
+$
+\begin{align}
+\quad\quad\quad\quad & \ce{CH3COOH(aq)} + &\ce{H2O(l) <=>}  &\ce{CH3COO-(aq)} + &\ce{H3O+(aq)}& \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \\
+I: & 0.14 & & 0.23 & 0 &\\
+C: & -x & & +x & +x &\\
+E: &0.14 - x& & 0.23 + x& x&
+\end{align}
+$
+
+កន្សោមថេរអុីយ៉ុងកម្ម $K_a = \ce{\frac{[CH3COO-][H3O+]}{[CH3COOH]}}$
+នាំឲ្យ $1.8 \times 10^{-5} = \frac{(0.23 + x)x}{0.14 - x}$
+
+
+ដោយតម្លៃ $K_a = 1.8 \times 10^{-5}$ តូចពេក នាំឲ្យ $x$ ក៏តូចណាស់ដែរ។​ ដូច្នេះតម្លៃ $x$ នៅក្នុងកន្សោមអាចចោលបាន $(0.14 - x) \approx 0.14;\ (0.23 + x) \approx 0.23$
+
+សមមូល $K_a = \frac{0.23x}{0.14} = 1.8\times 10^{-5}$
+សមមូល $x = \frac{0.14}{0.23} \times 1.8 \times 10^{-5} \approx 1.1 \times 10^{-5}M$
 
 ---
 
-ដោយដោះស្រាយសមីការតាមកំព្យូទ័រ គេបាន៖
+តាម $pH = \log[H3O+]$
+ដោយ $[H3O+] = 1.1 \times 10^{-5}$
+នាំឲ្យ $pH = \log(1.1 \times 10^{-5}) = 5 - \log 1.1 = 5 - 0.04 = \boxed{4.96}$
 
-|$\ce{[H3O+]}$ ថែម|x| $\ce{[H3O+]_f}$|pH|
-|---|---|---|---|
-|0.04|-0.0387
-|0.08|-0.0769
-|0.12|-0.1
-|0.16|-0.1163
+# Note 
+* បើលេខមិនផ្ទាងផ្ទាត់ទៅនឹង $\log$ គេឲ្យ នេាះយើងធ្វើខុសហើយ
 ---
+
+# ចម្លើយលំហាត់បន្ថែម
+1. រក $V_m$
+តាមច្បាប់ឧស្ម័នបរិសុទ្ធ $PV = nRT$ និងរូបមន្ត $n = \frac{V}{V_m}$
+គេបាន $PV = \frac{V}{V_m}RT \implies P = \frac{1}{V_m}RT \implies \boxed{V_m = \frac{RT}{P}}$
+ដោយ $\begin{cases}
+&R = 8.314 J/mol \cdot K\\
+&T = 0^\circ C = 273 K\\
+&P = 1atm = 101325
+\end{cases}$
+នាំឲ្យ $V_m = \frac{8.314 \times 273}{101325} \approx\boxed{ 22.4 l/mol}$
+
+---
+2. រក $n_{\ce{HCl}}$
+តាម​ $n_{\ce{HCl}} = \frac{V}{V_m}$
+ដោយ $\begin{cases}
+&V = 11.2l\\
+&V_m = 22.4l/mol
+\end{cases}$
+នាំឲ្យ $n_\ce{HCl} = \frac{11.2}{22.4} =\boxed{0.5mol}$
+
+---
+3. រក​ $[\ce{H3O+}]$
+\+ រក​ $\ce{[HCl]}$
+តាម​ $\ce{[HCl]} = \frac{n_\ce{HCl}}{V_s}$
+ដោយ $\begin{cases}
+&n_\ce{HCl} = 0.5mol\\
+&V_s = 2000ml = 2l
+\end{cases}
+$
+
+នាំឲ្យ $\ce{[HCl]} = \frac{0.5}{2} =\boxed{0.25M}$
+
+---
+
+សមីការអុីយ៉ុងកម្ម 
+$
+\begin{align}
+\quad\quad\quad\quad & \ce{HCl(aq)} + &\ce{H2O(l)<=>}  &\ce{Cl-(aq)} + &\ce{H3O+(aq)}& \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \\
+I: & 0.25 & & 0 & 0 &\\
+C: & -x & & +x & +x &\\
+E: &0.25 -x& & x& x&
+\end{align}
+$
+
+តាមកន្សោមថេរលំនឹង $K_a = \frac{\ce{[Cl-] \times [H3O+]}}{\ce{[HCl]}} = \frac{x \cdot x}{0.25 - x} = 1.3 \times 10^6$
+
+សមមូល​ $x^2 = 1.3\times 10^6 \times 0.25 - 1.3x \times 10^6$
+សមមូល $x^2 + 1.3 \times 10^6 x - 0.325 \times 10^6 = 0$
+
+សមមូល $x = \frac{- 1.3 \times 10^6  + \sqrt{(1.3 \times 10^6)^2 - 4(1)(- 0.325 \times 10^6)}}{2 \times 1} \boxed{= 0.2499999519M}$
+
+# Note
+* $K_a$ អត់តូច $\implies$ មិនអាចចោលបានទេ
+---
+
+4. រក​ pH
+
+តាម $pH = -\log [\ce{H3O+}]$
+ដោយ $\ce{[H3O+]} = 0.2499999519M$
+នាំឲ្យ $pH = - \log (0.2499999519) = \boxed{0.602}$
+
+
+---
+
+5. រក​​ $\alpha$
+
+តាមរូបមន្ត $\alpha = \ce{\frac{[H3O+] \times 100}{[HCl]}}$
+
+ដោយ $\begin{cases}
+&\ce{[H3O+]} = 0.2499999519M\\
+&\ce{[HCl]} = 0.25M
+\end{cases}$
+
+នាំឲ្យ $\alpha = \frac{0.2499999519 \times 100}{0.25}​ \boxed{= 99.99998076 \%}$
+
+---
+
+គេចាត់ទុកថា $HCl$ ជាអាសុីតខ្លាំងពីព្រេាះ The math speaks for itself. 
+ឃ្លា "ដោយ $\ce{HCl}$ ជាម៉ូណូអាសុីតខ្លាំង $\ce{[HCl] = [H3O+]}$" គឺជាការប៉ានស្មានអាចទទួលយកបានពីព្រេាះ​ $\alpha$ សឹងតែ 100%។
+
+---
+
+# តំប៉ុងឬមិនតំប៉ុង
+
+---
+
+
 
 # <!--fit-->Thanks!
