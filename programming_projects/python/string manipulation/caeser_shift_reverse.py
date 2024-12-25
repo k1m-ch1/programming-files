@@ -1,12 +1,6 @@
 import string
 input_str_rev = """
-B'f lh rhngz tgw rhn'kx lh hew
-Mabl, fr wtkebgz, B'ox uxxg mhew
-B whg'm vtkx cnlm patm maxr ltr
-'Vtnlx yhkxoxk B pbee iktr
-Rhn tgw B pbee ux tl ykxx
-Tl max ubkwl ni bg max mkxxl
-Ha, iextlx lmtr ur fx, Wbtgt
+M psaoic kmzmrk tpyw mrjmrmxi eyve qemr glevegxiv zmfiw gyd izivc wmrkpi wywwc feoew erh xlimv gvywxc sp kverhqe gipifvexmr qi fmvxlhec fyx xlexw wyw ej gyd izir xli sttw erh xli Fyhhle kpedivw wlsamr yt pmoi ai emr'x izir sr xli weqi xieq orsa alex m'q wecmr? Fyx jvjv xls xlmw Glvmwxqew ksrre lmx hmjjivirx rs get sr ksh (ci sr qi) ws c'epp womfmhm wmkqe ksxxe oiit xlex qiamrk wxvieo gyd M emr'x hcmr jsv cs hieheww wmrw rs qsvi.
 """
 num_of_alphabet = len(string.ascii_lowercase)
 key = len(input_str_rev.split()) % num_of_alphabet
