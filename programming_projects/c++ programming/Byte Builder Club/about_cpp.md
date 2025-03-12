@@ -22,3 +22,9 @@ int main(){
 - char: single quote. Ex: 'a'
 - string: double quotes. Ex: "Hello, world!"
 - bool: True, False
+
+# Naming conventions
+- Snake Case: "int file_size"
+- Camel Case: "int fileSize"
+- Pascal Case: "int FileSize"
+- Hugarian Notation: "int iFileSize"
