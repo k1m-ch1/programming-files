@@ -8,19 +8,20 @@ int main(int argc, char* argv[]){
 		<<"For example: './a.out 9 2' means printing 9 pages where each side has 2 pages"<<std::endl;
 	}
 	else{
-		//storing the number of "pages" and the number of "page_per_side"
+		//storing the number of "pages" and the number of "pages_per_side"
 		int pages = atoi(argv[1]);
-		int page_per_side = atoi(argv[2]);
+		int pages_per_side = atoi(argv[2]);
+
 		// blocks refer to the number of *full* sides there are
-		// for example if page_per_side = 3, then blocks must have all pages
-		int num_of_blocks = pages/page_per_side;
+		// for example if pages_per_side = 3, then blocks must have all pages
+		int num_of_blocks = pages/pages_per_side;
 		// calculate the size of the array that stores the first batch and second batch
-		int num_odd_pages = (num_of_blocks/2)*page_per_side + (num_of_blocks%2)*page_per_side + (num_of_blocks % 2 == 0? pages%page_per_side:0);
-		int num_even_pages = (num_of_blocks/2)*page_per_side + (num_of_blocks % 2 == 1? pages%page_per_side : 0);
+		int num_odd_pages = (num_of_blocks/2)*pages_per_side + (num_of_blocks%2)*pages_per_side + (num_of_blocks % 2 == 0? pages%pages_per_side:0);
+		int num_even_pages = (num_of_blocks/2)*pages_per_side + (num_of_blocks % 2 == 1? pages%pages_per_side : 0);
 		// std::cout << num_odd_pages << std::endl
 		// << num_even_pages <<std::endl;
 
-		//allocating the array to store the pages
+		//allocating the array to store the pages (bruh dumbass can't use c++)
 		int* odd_pages = (int*)malloc(num_odd_pages*sizeof(int));
 		int* even_pages =  (int*)malloc(num_even_pages*sizeof(int));
 
@@ -32,27 +33,27 @@ int main(int argc, char* argv[]){
 			//looping through all the blocks
 			if (i % 2 == 0){
 				// logic to store the pages that should get printed
-				for(int j = 0; j < page_per_side; j++){
-					odd_pages[n_at_odd_pages_arr] = i*page_per_side + j + 1;
+				for(int j = 0; j < pages_per_side; j++){
+					odd_pages[n_at_odd_pages_arr] = i*pages_per_side + j + 1;
 					n_at_odd_pages_arr++;
 				}
 			}
 			else {
-				for(int j = 0; j < page_per_side; j++){
-					even_pages[n_at_even_pages_arr] = i*page_per_side + j + 1;
+				for(int j = 0; j < pages_per_side; j++){
+					even_pages[n_at_even_pages_arr] = i*pages_per_side + j + 1;
 					n_at_even_pages_arr++;
 				}
 			}
 		}
 		//resolving the last few pages that should get printed
 		if (num_of_blocks%2 == 0){
-				for (int i = num_of_blocks*page_per_side; i < pages; i++){
+				for (int i = num_of_blocks*pages_per_side; i < pages; i++){
 					odd_pages[n_at_odd_pages_arr] = i + 1;
 					n_at_odd_pages_arr++;
 			}	
 		}
 		else{
-				for (int i = num_of_blocks*page_per_side; i < pages; i++){
+				for (int i = num_of_blocks*pages_per_side; i < pages; i++){
 					even_pages[n_at_even_pages_arr] = i + 1;
 					n_at_even_pages_arr++;
 			}	
@@ -63,7 +64,7 @@ int main(int argc, char* argv[]){
 		for (int i = 0; i < num_odd_pages; i++){
 			std::cout <<odd_pages[i] << ",";
 		}
-		if((num_of_blocks + (pages%page_per_side > 0? 1: 0)) % 2 == 1){
+		if((num_of_blocks + (pages%pages_per_side > 0? 1: 0)) % 2 == 1){
 			std::cout<<std::endl<<"Note: after printing the first batch"<<std::endl
 			<<"remove the last page before inserting it back into the printer";
 		}
