@@ -3,9 +3,9 @@
 int main(int argc, char* argv[]){
 
 	if (argc != 2 && argc != 3){
-		std::cout<<"Please enter the number of pages and the number of pages per sides"
+		std::cout<<"Please enter the number of pages and the number of pages per side"
 		<<std::endl
-		<<"For example: './a.out 9 2' means printing 9 pages where each sides has 2 page"<<std::endl;
+		<<"For example: './a.out 9 2' means printing 9 pages where each side has 2 pages"<<std::endl;
 	}
 	else{
 		//storing the number of "pages" and the number of "page_per_side"
