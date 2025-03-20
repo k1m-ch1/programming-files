@@ -32,7 +32,6 @@ int main(int argc, char* argv[]){
     std::cout << "x after *=: "<< x <<std::endl;
     int x_mod_y = x % y;
     std::cout << "Remainder of x / y:"<< x_mod_y <<std::endl<<std::endl;
-    
     std::cout<< x << " == "<< y << " is " << (x == y) << std::endl;
     std::cout<< x << " != "<< y << " is " << (x != y) << std::endl;
     std::cout<< x << " > "<< y << " is " << (x > y) << std::endl;
