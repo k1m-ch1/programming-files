@@ -6,7 +6,7 @@ class: invert
 
 # Book of inspiration
 
-- Hello everyone
+- Hello professor
 - Name is Kimchour
 - Gonna talk about my book of inspiration which is ...
 

@@ -6,7 +6,7 @@ class: invert
 
 # Book Of Inspiration
 
-by Kimchour LUY, ID: 2025136
+by ..., ID: 2025136
 
 ---
 
