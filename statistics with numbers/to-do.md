@@ -1,8 +1,8 @@
 # To Do 
 - ~~review of libraries~~
+- ~~binomial distribution -> normal distriution~~
+- ~~generate binomial distribution by definition~~
 - adding of 2 variables
-- binomial distribution -> normal distriution
-- generate binomial distribution by definition
 - test central limit theorem
 - test t distribution
 - generate chi squared distribution with numbers
