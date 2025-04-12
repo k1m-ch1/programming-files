@@ -2,10 +2,10 @@
 - ~~review of libraries~~
 - ~~binomial distribution -> normal distriution~~
 - ~~generate binomial distribution by definition~~
-- adding of 2 variables
-- test central limit theorem
-- test t distribution
-- generate chi squared distribution with numbers
+- ~~adding of 2 variables~~
+- ~~sum of 2 normal distributions~~
+- ~~test central limit theorem~~
+- ~~test t distribution~~
+- ~~generate chi squared distribution with numbers~~
 - sample variance of normal distribution follows chi square
-- sum of 2 normal distributions
 - checking Chebechev's theorem
