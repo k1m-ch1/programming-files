@@ -7,5 +7,5 @@
 - ~~test central limit theorem~~
 - ~~test t distribution~~
 - ~~generate chi squared distribution with numbers~~
-- sample variance of normal distribution follows chi square
+- ~~sample variance of normal distribution follows chi square~~
 - checking Chebechev's theorem
