@@ -1,0 +1,11 @@
+# To Do 
+- ~~review of libraries~~
+- ~~binomial distribution -> normal distriution~~
+- ~~generate binomial distribution by definition~~
+- ~~adding of 2 variables~~
+- ~~sum of 2 normal distributions~~
+- ~~test central limit theorem~~
+- ~~test t distribution~~
+- ~~generate chi squared distribution with numbers~~
+- ~~sample variance of normal distribution follows chi square~~
+- checking Chebechev's theorem

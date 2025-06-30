@@ -1,0 +1,44 @@
+p{
+  font-family: Arial;
+}
+.pfp{
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+img{
+  margin-top: px;
+  vertical-align: middle;
+}
+
+button{
+  margin-top: 10px;
+  background-color: #1D9BF0;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  border-width: 0px;
+  border-radius: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+input{
+  margin-top: 10px;
+  border-width: 0px;
+  height: 30px;
+  width: 500px;
+  font-family: Arial;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+input:focus{
+  outline: none;
+}

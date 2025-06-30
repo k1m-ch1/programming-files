@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "input output": "cpp",
+        "initializer_list": "c",
+        "type_traits": "c",
+        "xstring": "c",
+        "xutility": "c",
+        "stdio.h": "c",
+        "balancing_parenthesis": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}

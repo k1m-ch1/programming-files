@@ -1,0 +1,29 @@
+p{
+  font-family: Arial;
+  font-size: 17x;
+  line-height: 35px;
+  color: grey;
+  margin-left: 10px;
+}
+
+.email-box{
+  border-radius: 5px;
+  height: 25px;
+  width: 390px;
+  border: .1rem solid black;
+}
+
+button{
+  margin-left: 5px;
+  border-width: 0px;
+  border-radius: 100px;
+  font-size: 20px;
+  font-family: Arial;
+  background-color: blue;
+  color: white;
+  padding-left: 130px;
+  padding-right: 130px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+

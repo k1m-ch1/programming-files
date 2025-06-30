@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search bar thing but cool ig</title>
+    <style>
+      p {
+        margin: 0px;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+      body {
+        font-family: Arial;
+        font-size: 20px;
+        color: white;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        height: 50px;
+        background-color: purple;
+        justify-content: space-between;
+        
+      }
+      .home-div {
+        width: 150px;
+        align-self: center;
+        justify-self: center;
+        text-align: left;
+      }
+
+      .search-bar {
+        width: 100%;
+        height: 50%;
+        margin-top: 5px;
+        font-family: Arial;
+        font-size: 15px;
+        padding-left: 10px;
+        border-radius: 30px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+
+      .search-div {
+        flex: 1;
+        max-width: 800px;
+      }
+
+      .button-div {
+        width: 200px;
+        text-align: right;
+        margin-right: 10px;
+        padding-top: 5px;
+      }
+
+      button {
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+        font-family: Arial;
+        color: white;
+        background-color: purple;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="home-div">
+        <p>Home</p>
+      </div>
+      <div class="search-div">
+        <input class="search-bar"placeholder="Search">
+      </div>
+      <div class="button-div">
+        <button>Download</button>
+      </div>
+    </div>
+  </body>
+</html>

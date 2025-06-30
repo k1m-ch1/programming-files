@@ -1,0 +1,19 @@
+(info){
+[info_cmd]
+The game is played where players deliverhand signals that will represent the elements of the game; rock, paper and scissors. 
+The outcome of the game is determined by 3 simple rules:
+
+-Rock wins against scissors.
+-Scissors win against paper.
+-Paper wins against rock.
+---------------------------------------------------------------------------------}
+
+
+(commands){
+-info: explains the rule of the game
+-help: explains the instruction of the game
+-rock: play rock
+-paper: play paper
+-scissors: play scissors
+-quit: quit the game
+}

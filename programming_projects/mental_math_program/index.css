@@ -1,0 +1,40 @@
+
+.outer-title-div {
+  text-align: center;
+
+}
+.title-div {
+  font-size: 50px;
+  display:inline-block;
+}
+
+.userinterface-div {
+  text-align: center;
+}
+
+label {
+  font-family: Arial;
+  font-size: 30px;
+}
+
+input {
+  font-size: 30px;
+  width: 80px;
+}
+
+button {
+  color: white;
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  background-color: blue;
+  padding: 10px;
+  border-width: 0px;
+  border-radius: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button:active {
+  opacity: 0.8;
+}

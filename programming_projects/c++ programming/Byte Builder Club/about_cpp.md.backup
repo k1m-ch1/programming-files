@@ -1,0 +1,51 @@
+# About C++
+- Created by Bjorne Stroustrup
+- Cross platform
+
+## Boilerplate
+
+```c++
+#include <iostream>
+
+int main(){
+
+	return 0;
+	// return 0 if the main function ran without errors
+}
+
+```
+
+
+# Data Types
+- int: numbers
+- double: float 
+- char: single quote. Ex: 'a'
+- string: double quotes. Ex: "Hello, world!"
+- bool: True, False
+
+# Naming conventions
+- Snake Case: "int file_size"
+- Camel Case: "int fileSize"
+- Pascal Case: "int FileSize"
+- Hugarian Notation: "int iFileSize"
+
+
+# Boolean Algebra
+## Truth tables
+
+| $a$ | $b$ | $ a \land b$ |
+|---|---|---|
+|1 | 1 | 1 |
+|1 | 0 | 0 |
+|0 | 1 | 0 |
+|0 | 0 | 0 |
+
+
+| $a$ | $b$ | $ a \lor b$ |
+|---|---|---|
+|1 | 1 | 1 |
+|1 | 0 | 1 |
+|0 | 1 | 1 |
+|0 | 0 | 0 |
+
+## Number of variables and combinations
