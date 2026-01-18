@@ -1,4 +1,8 @@
 import discord
+import os
+from dotenv import load_dotenv
+
+laod_dotenv()
 
 class MyClient(discord.Client):
   async def on_ready(self):
@@ -13,4 +17,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTEwNzE1NzMyNjU0NjM1MDE0MA.GMSS-e.i3JsByd10O8YbH5dcb7p5Mx5qJ_F3t9edGYXUE')
+client.run(os.getenv("API_KEY"))

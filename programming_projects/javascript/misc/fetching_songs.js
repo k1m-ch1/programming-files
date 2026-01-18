@@ -55,12 +55,14 @@ async function getRecDelta(origFeatures, recFeatures) {
   return response.json();
 }
 
-let data = await checkSongArtist("Fuck Time", "Green Day")
+let data = await checkSongArtist("Fe!n", "Travis Scott")
 let songId = data.tracks.items[0].id;
 console.log(songId);
 let features = await getFeatures(songId);
 console.log(features);
-let recDelta = await getRecDelta(features, features);
-console.log(recDelta);
+//let recDelta = await getRecDelta(features, features);
+//console.log(recDelta);
+
 let rec = await getRec(songId, features, 10);
 console.log(rec);
+

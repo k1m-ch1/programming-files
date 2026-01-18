@@ -1,5 +1,9 @@
 import discord
 from discord.ext import commands
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = commands.Bot(command_prefix='!', intents=discord.Intents.all())
 
@@ -16,4 +20,4 @@ async def hello(request):
 async def goodbye(ctx):
   await ctx.send("Goodbye!")
 
-client.run('MTEwNzE1NzMyNjU0NjM1MDE0MA.GMSS-e.i3JsByd10O8YbH5dcb7p5Mx5qJ_F3t9edGYXUE')
+client.run(os.getenv("API_KEY"))
