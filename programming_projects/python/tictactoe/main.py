@@ -53,7 +53,7 @@ def check_for_win(player_info):
     return None
   
 #open file for text data and transfer that file into a string
-file_data = open(r'C:\Users\Kimchour\Documents\programming_projects\python\tictactoe\commands.txt', 'r').read()
+file_data = open(r'./commands.txt', 'r').read()
 scoreboard = lambda val: print("SCOREBOARD SCOREBOARD!\nAw, what happened to your friend?\nHey I know that guy. I killed him and he cried like a b*tch. {} undefeated".format(val))
 # Define a set for every cell called "all_row_and_col", a set for each diagonal wins called "left_right_diagonal" and vice versa, and the value for x and o
 all_row_and_col, left_to_right_diagonal, right_to_left_diagonal, x_set, o_set, x_wins, o_wins = {"A1","A2","A3","B1","B2","B3","C1","C2","C3"}, {"A1","B2","C3"}, {"C1","B2","A3"}, set(), set(), 0, 0
